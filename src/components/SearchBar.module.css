@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 5px;
+    background-color: #126e82;
+    width: 30%;
+    border-radius: 5px;
+}
+.btnInput{
+    text-align: center;
+    border-radius: 5px;
+}
+.btnSearch{
+    margin-left: 5px;
+    color:white;   
+    background-color: rgb(138, 178, 184);
+}
