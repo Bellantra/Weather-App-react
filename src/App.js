@@ -5,7 +5,7 @@ import Nav from './components/Nav';
 import Cards from './components/Cards';
 import Ciudad from './components/Ciudad';
 import Footer from './components/Footer';
-import { API_KEY } from './utils/constants';
+// import { API_KEY } from './utils/constants';
 import Swal from 'sweetalert2';
 
 
