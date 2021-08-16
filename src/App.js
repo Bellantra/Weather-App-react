@@ -7,6 +7,7 @@ import Ciudad from './components/Ciudad';
 import Footer from './components/Footer';
 // import { API_KEY } from './utils/constants';
 import Swal from 'sweetalert2';
+require('dotenv').config()
 
 
 
@@ -23,7 +24,8 @@ export default function App() {
   }
   function onSearch(ciudad) { 
      
-    const apiKey = API_KEY
+    const apiKey = process.env.REACT_APP_API_KEY
+        
     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}&units=metric`)
       .then(r => r.json())
       .then((recurso) => {
