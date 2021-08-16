@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import s from './Ciudad.module.css';
 
 export default function Ciudad({city}) {
-    if(!city) return <div>Ciudad no encontrada</div>
+    if(!city) return <div></div>  //Ver porque rompe aca y como solucionar mejor
     return (
         <div className={s.container}>
                 <div className={s.ciudad}>

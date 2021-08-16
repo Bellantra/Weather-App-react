@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
+import { React , useState } from 'react';
 import {Route} from 'react-router-dom';
 import './App.css';
 import Nav from './components/Nav';
-//import Card from './components/Card';
 import Cards from './components/Cards';
 import Ciudad from './components/Ciudad';
-import About from './components/About';
+import Footer from './components/Footer';
+import { API_KEY } from './utils/constants';
+import Swal from 'sweetalert2';
 
-export default function App() {
+
+
+export default function App() {  
+  let isCity=false;
   const [cities, setCities] = useState([]);
   function onFilter(ciudadId) {
     let ciudad = cities.filter(c => c.id === parseInt(ciudadId));
@@ -17,10 +21,9 @@ export default function App() {
         return null;
     }
   }
-  function onSearch(ciudad) {
-    //Acá habría que hacer el llamado a la API para obtener los datos de la ciudad
-    //pero de momento agregaremos una ciudad por default para ver que funcione
-    const apiKey= '4ae2636d8dfbdc3044bede63951a019b';
+  function onSearch(ciudad) { 
+     
+    const apiKey = API_KEY
     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}&units=metric`)
       .then(r => r.json())
       .then((recurso) => {
@@ -38,9 +41,22 @@ export default function App() {
             latitud: Math.round(recurso.coord.lat),
             longitud: Math.round(recurso.coord.lon)
           };
-          setCities(oldCities => [...oldCities, ciudad]);
+          
+          cities.map(c => {
+            if(c.id===ciudad.id) isCity=true
+          })          
+          if(isCity===true){           
+            Swal.fire('The city is already displayed')
+          }else{             
+            setCities(oldCities => [...oldCities, ciudad]);           
+          }
+          
         } else {
-          alert("Ciudad no encontrada");
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Invalid city!'           
+          })
         }
       });
 
@@ -70,11 +86,7 @@ export default function App() {
        <Route exact path='/'>        
          <Cards cities={cities} onClose={onClose}/> 
       </Route>
-
-      <Route
-        path='/about'
-        component={About}
-      />  
+     
           
     </div>
   );

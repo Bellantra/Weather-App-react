@@ -1,22 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Logo from '../logoHenry.png'
+import Logo from '../img/logo.png';
 import SearchBar from './SearchBar.jsx';
 import styles from './Nav.module.css';
 
 function Nav({onSearch}) {
   return (
     <div className={styles.container}>
-      <Link to='/'>
-        <div className={styles.subContainer}>
-        <img className={styles.imagen} src={Logo} alt="" />
-        <h4>Henry - Weather App</h4>
+      <Link className={styles.logo} to='/'>
+        <div className={styles.subContainer} >
+        <img className={styles.imagen} src={Logo} alt="Logo" />
+        <h5>Weather App</h5>
         </div>      
       </Link>
-      <Link to='/about'>
-        <span>About</span>
-      </Link>      
-      <SearchBar onSearch={onSearch}/>
+       
+      <SearchBar className={styles.searchBar} onSearch={onSearch}/>
+
+      {/* <Link className={styles.about} to='/about'>       
+        About            
+      </Link>       */}
     </div>
   );
 };

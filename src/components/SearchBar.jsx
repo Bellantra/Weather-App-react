@@ -14,7 +14,7 @@ export default function SearchBar({onSearch}) {
       <input   
         className={st.btnInput}     
         type="text"
-        placeholder="Lugar..."
+        placeholder="Enter city name..."
         value={city}
         onChange={e => setCity(e.target.value)} //Ver bien!!!
       />

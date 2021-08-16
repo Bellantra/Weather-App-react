@@ -1,18 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
 .container{
     display: flex;
     justify-content:center;
     align-items: center;
     padding: 5px;
-    background-color: #126e82;
-    width: 30%;
+    background-color: #126e82;    
     border-radius: 5px;
 }
 .btnInput{
+    font-size: 0.9rem;
     text-align: center;
     border-radius: 5px;
 }
 .btnSearch{
+    font-size: 0.9rem;
     margin-left: 5px;
+    padding: 0px 5px;
     color:white;   
     background-color: rgb(138, 178, 184);
+    border-radius: 5px;
 }

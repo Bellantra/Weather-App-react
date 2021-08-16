@@ -4,6 +4,7 @@
     width: auto;
     height: auto;
     align-content: center;
+    text-align: center;
     border: 1px grey;
     border-radius: 10px;
     padding: 0.5rem;
@@ -23,7 +24,7 @@
 img{    
     margin: 0px;
     padding: 0px;
-    width: 70%;
+    width: 80%;
 } 
 .card1{
     display: flex;
