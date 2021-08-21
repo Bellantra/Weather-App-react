@@ -1,5 +1,5 @@
 .container {
-  min-height: 100vh;
+  min-height: 380px;
   display: flex;
   flex-direction: row;
   justify-content: center;
