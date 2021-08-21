@@ -6,6 +6,7 @@
 }
 .container{
   display: flex; 
+  height: 10vh;
   align-items: center;  
   background: #8e9eab;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
@@ -34,4 +35,33 @@
   width: 60%;
 }
 
+@media screen and (max-width:720px) {
+  .logo{
+    width: 40%;
+  }
+  .imagen{
+    width: 40px;
+  }
+  .title{
+    font-size: 16px;
+  }
+  .searchBar{
+    width: 60%;
+  }
+}
 
+@media  screen and (max-width:450px) {
+  .subContainer{
+    padding-top: 10px;
+    justify-content: center;
+  }
+  .container{
+    flex-direction: column;
+    height: 20vh;
+   
+  }
+  .logo{
+    width: 100%;
+    padding-bottom: 15px;
+  }
+}

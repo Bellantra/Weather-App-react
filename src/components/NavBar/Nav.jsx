@@ -8,7 +8,7 @@ function Nav({onSearch}) {
 
   return (
     <div className={styles.container}>
-      <Link className={styles.logo} to='/' >
+      <Link className={styles.logo} onClick={()=>window.location.reload()} to='/' >
         <div className={styles.subContainer} >
         <img className={styles.imagen} src={Logo} alt="Logo" />
         <h5 className={styles.title}>Weather App</h5>

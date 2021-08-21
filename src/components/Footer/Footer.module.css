@@ -1,47 +1,40 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: cover;   
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: cover;
 }
-.footer{  
-  
-  background: #16222a; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right,#3a6073d5,#16222ace); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right,#3a6073d8,#16222ad5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  position: relative;
+.footer {
+  height: 10vh;
+  background: #16222a;
+  background: -webkit-linear-gradient(to right,#3a6073d5,#16222ace); 
+  background: linear-gradient(to right,#3a6073c0,#16222ab2);
   bottom: 0px;
   width: 100%;
- 
-  
-  
 }
-.container {
-   
+.footer {
   display: flex;
-  height: 55px;
-  line-height: 0px; 
-  justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
+  justify-content: center;
 }
 
 .icon {
-    margin:10px 10px;
-    display: inline-block;
-    align-items: center;
-    font-size: 30px; 
-    text-decoration: none;
-   
+  margin: 5px 5px;
+  display: inline-block;
+  align-items: center;
+  font-size: 25px;
+  text-decoration: none;
 }
 
-.icon a{
-    color:cornsilk;    
+.icon a {
+  color: cornsilk;
 }
 
-.icon a:hover{
-    font-size: 35px;
-    color: #30cfd0 ;
-   
+.icon a:hover {
+  color: #30cfd0;
 }
 
-
+@media screen and (max-width: 450px) {
+  .icon {
+    font-size: 20px;
+  }
+}
